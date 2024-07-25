@@ -1,0 +1,12 @@
+[Unit]
+Description=poketfi Request Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /root/poketfi/app.py
+WorkingDirectory=/root/poketfi/
+Restart=always 
+SyslogIdentifier=poketfi_service
+
+[Install]
+WantedBy=multi-user.target
