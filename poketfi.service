@@ -1,5 +1,5 @@
 [Unit]
-Description=Send Request Service
+Description=pocketfi Request Service
 After=network.target
 
 [Service]
