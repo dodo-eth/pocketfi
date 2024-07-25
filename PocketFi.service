@@ -1,15 +1,15 @@
-[Unit]
+
 Description=Send Request Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /root/PocketFi/app.py
-WorkingDirectory=/root/PocketFi/
+ExecStart=/usr/bin/python3 /root/pocketfi/app.py
+WorkingDirectory=/root/pocketFi/
 Restart=always
-StandardOutput=append:/root/PocketFi/PocketFi_service.out.log
-StandardError=append:/root/PocketFi/PocketFi_service.err.log
-SyslogIdentifier=PocketFi_service
+RestartSec=5s
+StartLimitInterval=30s
+StartLimitBurst=3 
+SyslogIdentifier=pocketFi_service
 
 [Install]
 WantedBy=multi-user.target
-
